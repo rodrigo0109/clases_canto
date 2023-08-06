@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='w-full xl:h-[600px] xs:h-[700px] md:h-[500px] boder flex xs:flex-col-reverse xl:flex-row items-center bg-main-white'>
-      <div  className='xs:w-[80%] xl:w-[50%] xl:h-[80%] flex items-center' data-aos="fade-rigth" data-aos-duration="1000">
+      <div  className='xs:w-[80%] xl:w-[50%] xl:h-[80%] flex items-center' data-aos="fade-right" data-aos-duration="1000">
         <div className='xl:w-[70%] xs:w-full h-full m-auto text-main-black xs:text-sm 2xl:text-lg text-justify tracking-wide flex flex-col justify-evenly'>
           <div>
             <p>
