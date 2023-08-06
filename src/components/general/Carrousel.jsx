@@ -37,7 +37,8 @@ const Carrousel = () => {
                           >
                               <iframe 
                                 width={window.innerWidth < 450 ? 300: 800} 
-                                height={window.innerWidth < 450 ? 200 : 450} 
+                                height={window.innerWidth < 450 ? 200 : 450}
+                                className='m-auto' 
                                 src={v} 
                                 title="YouTube video player" 
                                 frameBorder="0" 
