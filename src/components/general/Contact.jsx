@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
-import { Button, TextField } from '@mui/material'
+import { TextField } from '@mui/material'
 import { DM_Serif_Display } from 'next/font/google';
 import DyMap from '../DynamicComps/DynamicMap';
 import Link from 'next/link';
@@ -110,7 +110,7 @@ const Contact = () => {
                     }
                 }}
             />
-            <Button variant="contained" className='button' type='submit'>ENVIAR</Button>
+            <button className='button' type='submit'>ENVIAR</button>
           </form>
         </div>
       </div>

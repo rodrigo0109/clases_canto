@@ -57,7 +57,7 @@ body::-webkit-scrollbar-thumb{
 	background: transparent;
   color: #F9F9F9;
   border: 1px solid #F9F9F9;
-
+  transition: all 0.2s ease-in-out;
 }
 .button:hover {
 	background: #F9F9F9;
