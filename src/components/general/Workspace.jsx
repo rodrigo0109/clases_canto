@@ -45,7 +45,7 @@ const Workspace = () => {
                             <li>- Desenvolvimiento escénico</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className='mt-5'>
                         <p>
                             Es necesario cuidar y amar la propia voz de una forma sana y equilibrada. 
                             Escucharla, sentirla y conocer sus propios límites y capacidades.
