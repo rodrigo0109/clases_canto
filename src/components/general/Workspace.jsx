@@ -34,7 +34,7 @@ const Workspace = () => {
                         </p>
                     </div>
                     <div>
-                        <p className='font-medium'>Haremos foco en los siguientes puntos:</p>
+                        <p className='font-medium mt-5'>Haremos foco en los siguientes puntos:</p>
                     </div>
                     <div>
                         <ul>
