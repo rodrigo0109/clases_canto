@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Evangelina Perez</title>
-        <meta name="description" content="Clases de canto" />
+        <meta name="description" content="clases de canto zona sur Lomas de Zamora" />
         <link rel="icon" href="/tab.png" />
       </Head>
       <Layout>
