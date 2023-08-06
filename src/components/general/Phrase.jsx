@@ -25,7 +25,7 @@ const Phrase = () => {
                    Pero es gigantesca, multiplicada por toda la audiencia. Siento escalofríos."
                 </p>
             </div>
-            <div className={`xl:absolute xl:right-[100px] 2xl:right-[150px] xl:bottom-[200px] xs:text-center xs:mt-5 font-bold text-sm 2xl:text-lg italic`}>
+            <div className={`xl:absolute xl:right-[100px] 2xl:right-[150px] xl:bottom-[200px] xs:text-center xs:mt-5 font-bold text-sm 2xl:text-lg italic text-main-black`}>
               <p>
                 Janis Joplin
               </p>
