@@ -20,7 +20,7 @@ const Workspace = () => {
                 <div className='xs:w-full xl:w-[80%] h-full bg-workspace bg-center bg-cover bg-no-repeat shadow-2xl m-auto'></div>
             </div>
             <div className='xs:w-full xl:w-[50%] xl:h-[80%]'  data-aos="fade-left" data-aos-duration="1000">
-                <div className='xs:w-[80%] xl:w-[70%] h-full m-auto text-main-black xs:text-sm 2xl:text-md text-justify tracking-wide flex flex-col justify-evenly'>
+                <div className='xs:w-[80%] xl:w-[70%] h-full m-auto text-main-black xs:text-sm 2xl:text-lg text-justify tracking-wide flex flex-col justify-evenly'>
                     <h3 className={`xs:text-xl xs:mb-5 2xl:text-4xl font-semibold text-center`}>Información sobre las clases</h3>
                     <div>
                         <p>

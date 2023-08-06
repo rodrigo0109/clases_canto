@@ -7,11 +7,9 @@ const About = () => {
         <div className='xl:w-[70%] xs:w-full h-full m-auto text-main-black xs:text-sm 2xl:text-lg text-justify tracking-wide flex flex-col justify-evenly'>
           <div>
             <p>
-            Hola! Soy Evangelina Pérez y estudio canto hace muchos años. 
-            Ser cantante (aunque sea en la ducha) es el resultado de un trabajo constante, que lleva su tiempo de exploración y descubrimiento. 
-            Pero también es el resultado de las emociones, dudas miedos y euforias. 
-            La voz es identidad, es comunicación.
-            Descubrirla es un camino que vale la pena explorar. 
+              Hola! Soy Evangelina Pérez y estudio canto hace muchos años, en forma particular y en conservatorios como la EMPA o el Julián Aguirre. 
+              Ser cantante (aunque sea en la ducha) es el resultado de un trabajo constante, que lleva su tiempo de exploración y descubrimiento. Pero también es el resultado de las emociones, dudas miedos y euforias. 
+              La voz es identidad, es comunicación. Descubrirla es un camino que vale la pena explorar. 
             </p>
           </div>
           <div>
