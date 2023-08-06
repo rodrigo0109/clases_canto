@@ -11,6 +11,7 @@ module.exports = {
       'xs': '330px',
       'md': '650px',
       'xl': '1100px',
+      'xlhero': '1500px',
       '2xl': '1350px',
     },
     extend: {
