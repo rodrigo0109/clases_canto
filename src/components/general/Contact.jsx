@@ -28,7 +28,7 @@ const CssTextField = styled(TextField)({
     },
     //cambiar color al texto
     '&.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root': {
-      color:'#F9F9F9'
+      color:'#F9F9F9',
     }
   },
 });
@@ -76,12 +76,17 @@ const Contact = () => {
                 name='name'
                 value={data.name}
                 onChange={handleData}
-                type='text' 
+                type='text'
                 InputLabelProps={{
                     style: {
                         color:'#F9F9F9',
                         fontSize: '14px',
                     }
+                }}
+                inputProps={{
+                  style: {
+                    color: '#F9F9F9'
+                  }
                 }}
             />
             <CssTextField 
@@ -96,6 +101,11 @@ const Contact = () => {
                         fontSize: '14px'
                     }
                 }}
+                inputProps={{
+                  style: {
+                    color: '#F9F9F9'
+                  }
+                }}
             />
             <CssTextField 
                 label="Tu consulta"
@@ -108,6 +118,11 @@ const Contact = () => {
                         color:'#F9F9F9',
                         fontSize: '14px',
                     }
+                }}
+                inputProps={{
+                  style: {
+                    color: '#F9F9F9'
+                  }
                 }}
             />
             <button className='button' type='submit'>ENVIAR</button>
