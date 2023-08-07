@@ -47,7 +47,7 @@ const Carrousel = () => {
                                   <img className='w-full h-full object-cover' src={`/video0${i+1}.png`} />
                                   <svg 
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className='absolute xs:top-[40%] xs:left-[45%] md:top-[40%] md:left-[45%] xl:top-[35%] xl:left-[40%]' 
+                                    className='absolute xs:top-[40%] xs:left-[42%] md:top-[40%] md:left-[45%] xl:top-[35%] xl:left-[41%]' 
                                     height={window?.innerWidth < 450 ? "50px" : window?.innerWidth < 1100 ? "80px" : "150px" }
                                     width={window?.innerWidth < 450 ? "50px" :  window?.innerWidth < 1100 ? "80px" : "150px" } 
                                     viewBox="-35.20005 -41.33325 305.0671 247.9995"

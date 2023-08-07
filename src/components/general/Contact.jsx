@@ -66,7 +66,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='relative w-full xs:h-[1000px] xl:h-[700px] bg-stamm-black flex xs:flex-col-reverse xl:flex-row items-center'>
+    <div className='relative w-full xs:h-[900px] xl:h-[700px] bg-stamm-black flex xs:flex-col-reverse xl:flex-row items-center'>
       <div className='xs:w-[80%] xl:w-[50%] h-full'>
         <div className='xs:w-full xl:w-[60%] xs:h-[80%] xl:h-full m-auto flex flex-col justify-evenly text-center'  data-aos="fade-in" data-aos-duration="2000">
           <h3 className={`xs:text-2xl 2xl:text-4xl text-main-white tracking-wider`}>Obtener más info</h3>
