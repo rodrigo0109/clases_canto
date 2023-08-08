@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 import { TextField } from '@mui/material'
-import { DM_Serif_Display } from 'next/font/google';
+import { DM_Serif_Display, Lato } from 'next/font/google';
 import DyMap from '../DynamicComps/DynamicMap';
 import Link from 'next/link';
 
@@ -39,6 +39,12 @@ const serif = DM_Serif_Display({
   subsets: ['latin'],
 })
 
+const lato = Lato({
+  weight: ['700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
+
 const Contact = () => {
 
   const [data, setData] = useState({
@@ -69,7 +75,7 @@ const Contact = () => {
     <div className='relative w-full xs:h-[900px] xl:h-[700px] bg-stamm-black flex xs:flex-col-reverse xl:flex-row items-center'>
       <div className='xs:w-[80%] xl:w-[50%] h-full'>
         <div className='xs:w-full xl:w-[60%] xs:h-[80%] xl:h-full m-auto flex flex-col justify-evenly text-center'  data-aos="fade-in" data-aos-duration="2000">
-          <h3 className={`xs:text-2xl 2xl:text-4xl text-main-white tracking-wider`}>Obtener más info</h3>
+          <h3 className={`xs:text-2xl 2xl:text-4xl xl:mt-10 text-main-white tracking-wider ${lato.className}`}>Obtener más info</h3>
           <form className='xs:w-full flex flex-col justify-evenly xs:h-full xl:h-[70%]' action='https://getform.io/f/5ebe45c0-9173-4c41-85d6-8721825887fd' method='POST' onSubmit={handleSubmit}>
             <CssTextField 
                 label="Tu nombre"
