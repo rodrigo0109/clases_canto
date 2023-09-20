@@ -32,12 +32,12 @@ export default function App({ Component, pageProps }) {
         <title>Evangelina Perez</title>
         <meta name="description" content="clases de canto zona sur Lomas de Zamora" />
         <link rel="icon" href="/tab.png" />
-        <Script id="ms-clarity" strategy="beforeInteractive">
-            {clairtyCode}
-        </Script>
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <Script id="ms-clarity" strategy="beforeInteractive">
+            {clairtyCode}
+        </Script>
       </Layout>    
     </>
   )
