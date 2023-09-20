@@ -3,11 +3,13 @@ import '@/styles/globals.css'
 import Head from 'next/head'
 import { useEffect } from 'react';
 import AOS from "aos";
+import Script from 'next/script'
+
 
 import "aos/dist/aos.css";
 
 export default function App({ Component, pageProps }) {
-
+  
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -15,7 +17,15 @@ export default function App({ Component, pageProps }) {
       offset: 50,
     });
   }, []);
-
+  
+  const clairtyCode = `
+  (function (c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xxxxxxxxxxx");
+  `
+  
   return (
     <>
       <Head>
@@ -25,6 +35,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <Script id="ms-clarity" strategy="beforeInteractive">
+            {clairtyCode}
+        </Script>
       </Layout>    
     </>
   )
