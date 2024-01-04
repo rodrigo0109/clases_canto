@@ -21,8 +21,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'hero': "url('/bg-black.jpg')",
         'about': "url('/bg-about.jpg')",
-        'workspace': "url('/bg-workspace02.jpg')",
-        'phrase': "url('/bg-workspace01.jpg')",
+        'workspace': "url('/bg-workspace05.jpeg')",
+        'phrase': "url('/bg-workspace04.jpeg')",
       },
       colors: {
         'main-black': '#080300',

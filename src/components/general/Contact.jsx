@@ -139,7 +139,7 @@ const Contact = () => {
       <div className='absolute bottom-0 w-full h-[50px] text-main-white font-extralight text-xs tracking-wider flex flex-row items-center justify-center'>
         <div className='w-[250px] text-center'>
           <h5>
-            Desarrollado por <span className='hover:underline'><Link href={'https://www.linkedin.com/in/rodrigo-perez-full-stack-developer/'} target='_blank' passHref>Rodrigo Pérez</Link></span> - &copy;2023
+            Desarrollado por <span className='hover:underline'><Link href={'https://www.linkedin.com/in/rodrigo-perez-full-stack-developer/'} target='_blank' passHref>Rodrigo Pérez</Link></span> - &copy;{new Date().getFullYear()}
           </h5>
         </div>
       </div>
