@@ -12,6 +12,9 @@ const Carrousel = () => {
 
   const video = [
     {
+      url: 'https://youtu.be/Su-znZpbRqg?si=OaLWtl3XhyCYrjdO'
+    },
+    {
       url: 'https://www.youtube.com/embed/D7oshMenr4c'
     },
     {
