@@ -43,7 +43,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Envíame tu consulta y me voy a contactar con vos.
               </p>
-              <form action='https://getform.io/f/5ebe45c0-9173-4c41-85d6-8721825887fd' method='POST' >
+              <form action='https://getform.io/f/5ebe45c0-9173-4c41-85d6-8721825887fd' method='POST' onSubmit={() => setData({ name: '', email: '', message: '' })}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
