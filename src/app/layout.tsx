@@ -20,13 +20,13 @@ export default function RootLayout({
         <link rel="icon" href={`/tab.png`} />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Clases de canto personalizadas para todos los niveles. Aprende técnicas vocales y mejora tu voz con una profesora experimentada." />
-        <meta name="keywords" content="clases de canto, técnica vocal, lecciones de canto, profesora de canto, canto para principiantes, entrenamiento vocal" />
+        <meta name="description" content="Clases de canto personalizadas para todos los niveles en la ciudad de Buenos Aires. Aprende técnicas vocales y mejora tu voz con una profesora experimentada." />
+        <meta name="keywords" content="clases de canto, técnica vocal, lecciones de canto, profesora de canto, canto para principiantes, entrenamiento vocal, clases de canto particulares, clases de canto caba" />
         <meta name="author" content="Evangelina Pérez" />
         <link rel="icon" href={`/tab.png`} />
         <title>Evangelina Pérez</title>
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Clases de Canto con Evangelina Pérez" />
+        <meta property="og:title" content="Clases de canto - Evangelina Pérez" />
         <meta property="og:description" content="Clases de canto personalizadas para todos los niveles. Aprende técnicas vocales y mejora tu voz con una profesora experimentada." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.evangelinaperez.com" />
