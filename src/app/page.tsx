@@ -8,8 +8,8 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Evangelina Pérez",
-  description: "Clases de canto",
+  title: "Clases de canto particulares en Buenos Aires - CABA",
+  description: "Clases de canto personalizadas para todos los niveles en la ciudad de Buenos Aires. Aprende técnicas vocales y mejora tu voz con una profesora experimentada.",
   // other metadata
 };
 

@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta name="keywords" content="clases de canto, técnica vocal, lecciones de canto, profesora de canto, canto para principiantes, entrenamiento vocal, clases de canto particulares, clases de canto caba" />
         <meta name="author" content="Evangelina Pérez" />
         <link rel="icon" href={`/tab.png`} />
-        <title>Evangelina Pérez</title>
+        <title>Clases de canto particulares en Buenos Aires - CABA</title>
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Clases de canto - Evangelina Pérez" />
         <meta property="og:description" content="Clases de canto personalizadas para todos los niveles. Aprende técnicas vocales y mejora tu voz con una profesora experimentada." />
