@@ -6,7 +6,7 @@ const Map = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 h-full rounded-sm bg-white p-0 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+    <div className="relative z-10 h-full rounded-sm bg-white p-0 shadow-three dark:bg-[#000] sm:p-11 lg:p-8 xl:p-11">
       <div
         className="flex h-full w-full flex-row items-center justify-center"
         data-aos="fade-in"
