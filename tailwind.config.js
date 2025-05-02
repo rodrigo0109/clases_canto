@@ -34,11 +34,20 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
-      backgroundImage:{
-        'hero': "url('/images/hero/bg-black.jpg')",
-        'about': "url('/images/about/bg-about.jpg')",
-        'about2': "url('/images/about/bg-about2.jpeg')",
-        'about3': "url('/images/about/bg-about3.jpeg')",
+      backgroundImage: {
+        hero: "url('/images/hero/header.jpeg')",
+        card0: "url('/images/card/1.jpeg')",
+        card1: "url('/images/card/2.jpeg')",
+        card2: "url('/images/card/3.jpeg')",
+        card3: "url('/images/card/4.jpeg')",
+        card4: "url('/images/card/5.jpeg')",
+        ab: "url('/images/about/ab.jpeg')",
+        students: "url('/images/students/grupal.jpeg')",
+        about: "url('/images/about/bg-about.jpg')",
+        about2: "url('/images/about/bg-about2.jpeg')",
+        about3: "url('/images/about/bg-about3.jpeg')",
+        spotify: "url('/images/contact/spotify.jpeg')",
+        ig: "url('/images/contact/ig.jpeg')",
       },
       colors: {
         current: "currentColor",

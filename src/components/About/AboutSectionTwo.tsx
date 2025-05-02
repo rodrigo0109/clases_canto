@@ -1,86 +1,42 @@
-import SectionTitle from "../Common/SectionTitle";
-
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
-
 const AboutSectionTwo = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
-
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-row-reverse flex-wrap sm:flex-nowrap px-5 sm:px-0 items-center justify-between">
-            
-            <div className="w-full px-4 lg:w-1/2 flex flex-col items-end sm:ml-10 2xl:ml-0">
-              <SectionTitle
-                title="Información sobre las clases"
-                paragraph="En el arte del canto, cada nota es una expresión única de tu identidad y emociones. 
-                Es un viaje de autodescubrimiento donde las dudas y los miedos se convierten en oportunidades para crecer y superarte. "
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="Con dedicación y trabajo constante, cuanto más conozcas tu instrumento más fácil será sortear los desafíos que se te presenten."
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="Haremos foco en los siguientes puntos:"
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="- Técnica vocal"
-                mb="0px"
-                // paragraphSize="16px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="- Respiración"
-                mb="0px"
-                // paragraphSize="16px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="- Ejercicios de relajación"
-                mb="0px"
-                // paragraphSize="16px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="- Repertorio"
-                mb="0px"
-                // paragraphSize="16px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="- Desenvolvimiento escénico"
-                mb="0px"
-                // paragraphSize="16px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="Es necesario cuidar y amar la propia voz de una forma sana y equilibrada. 
-                Escucharla, sentirla y conocer sus propios límites y capacidades."
-                mb="0px"
-              />
-            </div>
-
-            <div className="w-full mt-4 sm:mt-0 h-[500px] px-4 xl:w-1/2 bg-about2 bg-no-repeat bg-center bg-cover">
-
-            </div>
+        <div className="w-full border"></div>
+        <div className="flex flex-row items-center pt-8">
+          <div className="flex w-full flex-col items-start leading-relaxed text-body-color lg:w-1/2">
+            <h2 className="mx-auto mb-4 text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
+              Sobre mi
+            </h2>
+            <span className="mt-2">
+              Soy Evangelina Pérez, cantante y docente de canto. Hace varios
+              años me dedico a acompañar a personas en su camino vocal,
+              combinando mi formación en el conservatorio con una profunda
+              exploración autodidacta. Canto desde que tengo memoria, y la
+              música siempre ha sido un lugar de encuentro, expresión y
+              transformación para mí.
+            </span>
+            <span className="mt-2">
+              A lo largo de mi recorrido, me formé en diversos géneros —como el
+              soul, el R&B, la cumbia colombiana y el pop— lo que me permite
+              adaptar las clases al universo musical de cada persona. Creo en la
+              técnica como herramienta al servicio de la emoción, y en el cuerpo
+              como un instrumento que también aprende a afinarse.
+            </span>
+            <span className="mt-2">
+              En mis clases vas a encontrar un espacio cálido, donde la
+              confianza, la escucha y el disfrute son pilares fundamentales. Mi
+              intención es que puedas conectar con tu voz, reconocer tu
+              potencial y animarte a desarrollarlo sin miedo. No importa si
+              cantás por hobby o si querés profundizar tu formación: lo
+              importante es que tengas ganas de expresarte y de descubrir tu
+              propia manera de sonar.
+            </span>
+            <span className="mt-2">
+              Te invito a sumarte y empezar este viaje vocal conmigo.
+            </span>
           </div>
+          <div className="bg-ab ml-2.5 h-[400px] w-full bg-cover bg-center bg-no-repeat px-4 sm:mt-0 lg:w-1/2"></div>
         </div>
       </div>
     </section>
