@@ -45,20 +45,6 @@ export default function RootLayout({
           property="og:image"
           content="https://www.evangelinaperez.com/imagen.png"
         />
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Clases de Canto con Evangelina Pérez"
-        />
-        <meta
-          name="twitter:description"
-          content="Clases de canto personalizadas para todos los niveles. Aprende técnicas vocales y mejora tu voz con una profesora experimentada."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.evangelinaperez.com/imagen.png"
-        />
       </head>
 
       <body
@@ -66,6 +52,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Providers>
+          <SEO />
           {children}
           <Footer />
           <ScrollToTop />
@@ -78,3 +65,4 @@ export default function RootLayout({
 
 import { Providers } from "./providers";
 import DyWpp from "@/components/DynamicComps/DynamicWpp";
+import SEO from "./seo";
