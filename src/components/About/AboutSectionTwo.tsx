@@ -5,10 +5,10 @@ const AboutSectionTwo = () => {
         <div className="w-full border"></div>
         <div className="flex flex-col items-center pt-8 lg:flex-row">
           <div className="flex w-full flex-col px-4 leading-relaxed text-body-color lg:w-1/2">
-            <h2 className="font-sequel mx-auto mb-4 text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
+            <h2 className="mx-auto mb-4 font-sequel text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
               Sobre mí
             </h2>
-            <div className="font-sequel flex flex-col text-center font-light tracking-wide">
+            <div className="flex flex-col text-center font-sequel font-light tracking-wide">
               <span className="mt-2">
                 Soy Evangelina Pérez, cantante y docente de canto. Hace varios
                 años me dedico a acompañar a personas en su camino vocal,
@@ -38,7 +38,11 @@ const AboutSectionTwo = () => {
               </span>
             </div>
           </div>
-          <div className="bg-ab mt-8 h-[400px] w-full bg-cover bg-center bg-no-repeat px-4 sm:mt-0 lg:ml-2.5 lg:w-1/2"></div>
+          <div className="relative mt-8 h-[400px] w-full bg-ab bg-cover bg-center bg-no-repeat px-4 sm:mt-0 lg:ml-2.5 lg:w-1/2">
+            <span className="absolute bottom-2 left-2 text-xs">
+              @selene.rgb
+            </span>
+          </div>
         </div>
       </div>
     </section>

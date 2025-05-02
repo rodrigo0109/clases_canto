@@ -10,10 +10,10 @@ const Hero = () => {
     >
       <div className="container m-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="font-sequel flex flex-col text-center text-4xl font-bold tracking-wide xl:text-7xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="flex flex-col text-center font-sequel text-4xl font-bold tracking-wide xl:text-7xl"
         >
           <h1>Clases de canto</h1>
           <span className="text-2xl font-semibold xl:text-4xl">
