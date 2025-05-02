@@ -1,8 +1,6 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import SectionTitle from "../Common/SectionTitle";
 
 const Header = () => {
@@ -34,7 +32,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
             : "absolute bg-transparent"
         }`}
       >
@@ -50,11 +48,6 @@ const Header = () => {
                 <SectionTitle title="EP" mb="0px" />
               </Link>
             </div>
-            {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <div>
-                <ThemeToggler />
-              </div>
-            </div> */}
           </div>
         </div>
       </header>

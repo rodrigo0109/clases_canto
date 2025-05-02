@@ -1,51 +1,56 @@
-import SectionTitle from "../Common/SectionTitle";
-
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
+import Card from "./Card";
+import cardsData from "./cards.json";
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
-
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 px-5 sm:px-0 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Hola! Soy Evangelina Pérez."
-                paragraph="Estudio canto hace muchos años, en forma particular y en conservatorios como la EMPA o el Julián Aguirre."
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="Ser cantante (aunque sea en la ducha) es el resultado de un trabajo constante, que lleva su tiempo de exploración y descubrimiento. Pero también es el resultado de las emociones, dudas miedos y euforias."
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="La voz es identidad, es comunicación. Descubrirla es un camino que vale la pena explorar."
-                mb="10px"
-              />
-              <SectionTitle
-                title=""
-                paragraph="A continuación, podés ver algo de mi recorrido por la música."
-                mb="10px"
-              />
+      <div className="container w-full">
+        <div className="border-b border-body-color/[.15] dark:border-white/[.15]">
+          <div className="flex w-full flex-wrap items-center sm:px-0 lg:mx-4 xl:px-5">
+            <div className="flex w-full flex-col items-center px-4 text-center leading-relaxed text-body-color">
+              <h2 className="font-sequel mx-auto mb-4 text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
+                Descubrí tu voz y disfrutá el proceso
+              </h2>
+              <div className="font-sequel flex flex-col font-light tracking-wide">
+                <span className="mt-2">
+                  Mis clases están pensadas para todo aquel que quiera cantar,
+                  explorar su voz y desarrollar su potencial artístico en un
+                  espacio cuidado, sin presiones ni exigencias competitivas.
+                </span>
+                <span className="mt-2">
+                  Trabajamos técnica vocal, respiración, afinación, y sobre todo
+                  interpretación: porque cantar es mucho más que emitir notas,
+                  es una forma de expresar lo que sentimos. Acompaño cada
+                  proceso de manera personalizada, respetando tus tiempos y
+                  motivaciones.
+                </span>
+                <span className="mt-2">
+                  No necesitás experiencia previa. Solo ganas de animarte a
+                  cantar.
+                </span>
+                <span className="mt-2">
+                  Las clases presenciales se dictan en la localidad de
+                  Balvanera, CABA y tienen una duración de 1h.
+                </span>
+                <span className="mt-2">
+                  Si estás buscando un espacio para conectarte con tu voz,
+                  animarte a expresarte y disfrutar del canto, te espero.
+                </span>
+                <span className="mt-2 font-bold text-black">
+                  Cupos limitados.
+                </span>
+              </div>
             </div>
 
-            <div className="w-full mt-4 sm:mt-0 h-[400px] px-4 lg:w-1/2 bg-about bg-no-repeat bg-center bg-cover">
-
+            <div className="mt-10 flex w-full flex-col items-center justify-center lg:flex-row lg:flex-wrap">
+              {cardsData.map((card: any, i: number) => (
+                <Card
+                  key={i}
+                  title={card.title}
+                  index={i}
+                  message={card.message}
+                />
+              ))}
             </div>
           </div>
         </div>
