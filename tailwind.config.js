@@ -49,6 +49,9 @@ module.exports = {
         spotify: "url('/images/contact/spotify.jpeg')",
         ig: "url('/images/contact/ig.jpeg')",
       },
+      fontFamily: {
+        sequel: ["Sequel", "sans-serif"],
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
