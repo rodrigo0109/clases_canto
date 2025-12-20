@@ -65,3 +65,44 @@
   color: #bf1dd8;
   text-shadow: #bf1dd8 2px 0 20px;
 }
+
+/* Swiper Navigation Styles */
+.news-carousel .swiper-button-next,
+.news-carousel .swiper-button-prev {
+  color: #bf1dd8;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.news-carousel .swiper-button-next:after,
+.news-carousel .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.news-carousel .swiper-pagination-bullet {
+  background: #bf1dd8;
+  opacity: 0.5;
+}
+
+.news-carousel .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Force equal height for all slides */
+.news-carousel .swiper-slide {
+  height: auto;
+  display: flex;
+  width: 100%;
+}
+
+.news-carousel .swiper-slide > * {
+  width: 100%;
+}
+
+.news-carousel .swiper-wrapper {
+  align-items: stretch;
+}

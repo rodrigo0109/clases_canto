@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mt-20 overflow-hidden py-16 dark:bg-[#000] md:py-10 lg:py-10"
+      className=" overflow-hidden py-16 dark:bg-[#000] md:py-10 lg:py-10"
     >
       <div className="container">
         <div className="-mx-4 flex flex-col items-center lg:flex-row">
@@ -17,7 +17,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="h-[150px] w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105 lg:h-[300px]"
             >
-              <div className="bg-ig h-full w-full bg-contain bg-center bg-no-repeat">
+              <div className="h-full w-full bg-ig bg-contain bg-center bg-no-repeat">
                 <span className="sr-only">Ir a WhatsApp</span>
               </div>
             </a>
@@ -27,7 +27,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="h-[150px] w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105 lg:h-[300px]"
             >
-              <div className="bg-spotify h-full w-full bg-contain bg-center bg-no-repeat">
+              <div className="h-full w-full bg-spotify bg-contain bg-center bg-no-repeat">
                 <span className="sr-only">Ir a Spotify</span>
               </div>
             </a>

@@ -1,45 +1,51 @@
-"use client";
-import SectionTitle from "../Common/SectionTitle";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Opinions from "./opinions.json";
+import StudentsSwiper from "./StudentsSwiper";
+import { client } from "@/sanity/lib/client";
+import {
+  APPROVED_TESTIMONIALS_QUERY,
+  SECTION_BACKGROUNDS_QUERY,
+} from "@/sanity/lib/queries";
+import { Testimonial, SectionBackgrounds } from "@/sanity/lib/types";
 
-import "swiper/css";
-import "swiper/css/pagination";
+const Students = async () => {
+  const [testimonials, backgrounds]: [
+    Testimonial[],
+    SectionBackgrounds | null,
+  ] = await Promise.all([
+    client.fetch(APPROVED_TESTIMONIALS_QUERY, {}, { next: { revalidate: 60 } }),
+    client.fetch(SECTION_BACKGROUNDS_QUERY, {}, { next: { revalidate: 60 } }),
+  ]);
 
-const Students = () => {
-  SwiperCore.use([Autoplay]);
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section
+      id="about"
+      className="relative overflow-hidden py-16 md:py-20 lg:py-28"
+    >
+      {backgrounds?.studentsBackground && (
+        <>
+          <div
+            className="absolute -inset-2 -z-10"
+            style={{
+              backgroundImage: `url(${backgrounds.studentsBackground})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "blur(3px)",
+              // transform: "scale(1.05)",
+            }}
+          />
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
+          />
+        </>
+      )}
       <div className="container flex flex-col">
-        <div className="w-full border"></div>
-        <h2 className="font-sequel mx-auto mb-4 mt-4 text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
+        <h2 className="mx-auto mb-4 mt-4 font-sequel text-2xl font-bold !leading-tight text-white sm:text-3xl md:text-[55px]">
           Mis alumnos
         </h2>
-        <div className="flex w-full flex-col pt-8 lg:flex-row">
-          <div className="bg-students mr-2.5 h-[400px] w-full bg-cover bg-center bg-no-repeat px-4 sm:mt-0 lg:w-1/2"></div>
-          <div className="flex h-full w-full flex-row items-center justify-center lg:ml-2.5 lg:w-1/2">
-            <Swiper
-              className="xs:h-[250px] xs:w-[80%] md:h-[500px] xl:w-[800px]"
-              modules={[Pagination]}
-              spaceBetween={40}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 2000 }}
-              loop
-            >
-              {Opinions.map((v, i) => (
-                <SwiperSlide key={i}>
-                  <div
-                    className="font-sequel mx-auto mt-20 flex h-[250px] w-[80%] items-center overflow-hidden rounded-lg border bg-gray-100 px-6 text-center italic tracking-wide text-black shadow-lg "
-                    data-wow-delay=".15s"
-                  >
-                    {v}
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+        <div className="flex w-full justify-start pt-8">
+          <StudentsSwiper testimonials={testimonials} />
         </div>
       </div>
     </section>
