@@ -42,13 +42,10 @@ const NewsSection = ({ newsItems, backgrounds }: NewsSectionProps) => {
         {backgrounds?.newsBackground && (
           <>
             <div
-              className="absolute -inset-2 -z-10"
+              className="absolute -inset-4 -z-10 bg-cover bg-center md:-inset-2"
               style={{
                 backgroundImage: `url(${backgrounds.newsBackground})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
                 filter: "blur(3px)",
-                // transform: "scale(1.05)",
               }}
             />
             <div

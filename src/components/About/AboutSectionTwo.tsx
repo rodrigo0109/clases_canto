@@ -38,15 +38,18 @@ const AboutSectionTwo = async () => {
       {backgrounds?.aboutSectionTwoBackground && (
         <>
           <div
-            className="absolute -inset-2 -z-10"
+            className="absolute -inset-4 -z-10 bg-cover bg-center md:-inset-2"
             style={{
               backgroundImage: `url(${backgrounds.aboutSectionTwoBackground})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              // transform: "scale(0.5)",
+              filter: "blur(3px)",
             }}
           />
-          <div className="absolute inset-0 -z-10" />
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
+          />
         </>
       )}
       <div className="container">

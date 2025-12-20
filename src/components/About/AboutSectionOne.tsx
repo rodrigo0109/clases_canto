@@ -36,7 +36,6 @@ const AboutSectionOne = async () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               filter: "blur(3px)",
-              // transform: "scale(1.05)",
             }}
           />
           <div

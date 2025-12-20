@@ -55,11 +55,23 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
         );
         reset();
         setSelectedRating(0);
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          setSubmitMessage("");
+        }, 5000);
       } else {
         setSubmitMessage("Error al enviar la reseña. Intenta nuevamente.");
+        // Ocultar mensaje de error después de 5 segundos
+        setTimeout(() => {
+          setSubmitMessage("");
+        }, 5000);
       }
     } catch (error) {
       setSubmitMessage("Error al enviar la reseña. Intenta nuevamente.");
+      // Ocultar mensaje de error después de 5 segundos
+      setTimeout(() => {
+        setSubmitMessage("");
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -78,13 +90,10 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
       {backgrounds?.reviewBackground && (
         <>
           <div
-            className="absolute -inset-2 -z-10"
+            className="absolute -inset-4 -z-10 bg-cover bg-top md:-inset-2"
             style={{
               backgroundImage: `url(${backgrounds.reviewBackground})`,
-              backgroundSize: "cover",
-              backgroundPosition: "top",
               filter: "blur(3px)",
-              // transform: "scale(1.05)",
             }}
           />
           <div
@@ -97,7 +106,7 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
       )}
       <div className="container">
         <div className="mx-auto max-w-2xl">
-          <div className=" border-body-color/[.15] pb-8 dark:border-white/[.15]">
+          <div className="pb-8">
             <h2 className="mb-4 text-center font-sequel text-2xl font-bold !leading-tight text-white sm:text-3xl md:text-[55px]">
               Dejá tu reseña
             </h2>
@@ -108,12 +117,12 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
 
           <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
             <div className="mb-6">
-              <label className="mb-2 block text-sm font-medium text-black">
+              <label className="mb-2 block text-sm font-medium text-white">
                 Tu nombre *
               </label>
               <input
                 {...register("studentName")}
-                className="w-full rounded border border-gray-300 px-4 py-3 text-black focus:border-primary focus:outline-none"
+                className="w-full rounded border border-gray-300 px-4 py-3 text-white focus:border-primary focus:outline-none"
                 type="text"
                 placeholder="Tu nombre"
               />
@@ -141,7 +150,7 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
                     <span
                       className={
                         star <= (hoveredRating || selectedRating)
-                          ? "text-yellow-400"
+                          ? "text-primary"
                           : "text-gray-300"
                       }
                     >
@@ -163,7 +172,7 @@ const ReviewForm = ({ backgrounds }: ReviewFormProps) => {
               </label>
               <textarea
                 {...register("quote")}
-                className="w-full rounded border border-gray-300 px-4 py-3 text-black focus:border-primary focus:outline-none"
+                className="w-full rounded border border-gray-300 px-4 py-3 text-white focus:border-primary focus:outline-none"
                 rows={5}
                 placeholder="Contanos sobre tu experiencia con las clases..."
                 maxLength={500}
