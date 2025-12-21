@@ -1,47 +1,70 @@
-const AboutSectionTwo = () => {
+import { client } from "@/sanity/lib/client";
+import {
+  PROFILE_SECTION_QUERY,
+  SECTION_BACKGROUNDS_QUERY,
+} from "@/sanity/lib/queries";
+import { ProfileSection, SectionBackgrounds } from "@/sanity/lib/types";
+
+const AboutSectionTwo = async () => {
+  const [profileSection, backgrounds]: [
+    ProfileSection | null,
+    SectionBackgrounds | null,
+  ] = await Promise.all([
+    client.fetch(PROFILE_SECTION_QUERY, {}, { next: { revalidate: 60 } }),
+    client.fetch(SECTION_BACKGROUNDS_QUERY, {}, { next: { revalidate: 60 } }),
+  ]);
+
+  // Fallback if no content in Sanity yet
+  if (!profileSection) {
+    return (
+      <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+        <div className="container">
+          <div className="w-full border"></div>
+          <div className="flex flex-col items-center pt-8">
+            <p className="text-body-color">
+              Configurá la sección &ldquo;Sobre mí&rdquo; en el Studio de
+              Sanity.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section
+      id="about"
+      className="relative overflow-hidden pb-10 pt-10 md:pb-10 md:pt-10 lg:pb-10 lg:pt-10"
+    >
+      {backgrounds?.aboutSectionTwoBackground && (
+        <>
+          <div
+            className="absolute -inset-4 -z-10 bg-cover bg-center md:-inset-2"
+            style={{
+              backgroundImage: `url(${backgrounds.aboutSectionTwoBackground})`,
+            }}
+          />
+          <div
+            className="absolute inset-0 -z-10"
+            // style={{
+            //   backgroundColor: "rgba(0, 0, 0, 0.5)",
+            // }}
+          />
+        </>
+      )}
       <div className="container">
-        <div className="w-full border"></div>
-        <div className="flex flex-col items-center pt-8 lg:flex-row">
-          <div className="flex w-full flex-col px-4 leading-relaxed text-body-color lg:w-1/2">
-            <h2 className="mx-auto mb-4 font-sequel text-2xl font-bold !leading-tight text-black sm:text-3xl md:text-[35px]">
-              Sobre mí
+        <div className="flex flex-col items-center py-8 lg:flex-row">
+          <div className="flex w-full flex-col px-4 leading-relaxed text-white lg:w-1/2">
+            <h2 className="mx-auto mb-4 font-sequel text-2xl font-bold !leading-tight text-white sm:text-3xl md:text-[55px]">
+              {profileSection.heading}
             </h2>
             <div className="flex flex-col text-center font-sequel font-light tracking-wide">
-              <span className="mt-2">
-                Soy Evangelina Pérez, cantante y docente de canto. Hace varios
-                años me dedico a acompañar a personas en su camino vocal,
-                combinando mi formación en el conservatorio con una profunda
-                exploración autodidacta. Canto desde que tengo memoria, y la
-                música siempre ha sido un lugar de encuentro, expresión y
-                transformación para mí.
-              </span>
-              <span className="mt-2">
-                A lo largo de mi recorrido, me formé en diversos géneros —como
-                el soul, el R&B, la cumbia colombiana y el pop— lo que me
-                permite adaptar las clases al universo musical de cada persona.
-                Creo en la técnica como herramienta al servicio de la emoción, y
-                en el cuerpo como un instrumento que también aprende a afinarse.
-              </span>
-              <span className="mt-2">
-                En mis clases vas a encontrar un espacio cálido, donde la
-                confianza, la escucha y el disfrute son pilares fundamentales.
-                Mi intención es que puedas conectar con tu voz, reconocer tu
-                potencial y animarte a desarrollarlo sin miedo. No importa si
-                cantás por hobby o si querés profundizar tu formación: lo
-                importante es que tengas ganas de expresarte y de descubrir tu
-                propia manera de sonar.
-              </span>
-              <span className="mt-2">
-                Te invito a sumarte y empezar este viaje vocal conmigo.
-              </span>
+              {profileSection.paragraphs.map((paragraph, index) => (
+                <span key={index} className="mt-2">
+                  {paragraph}
+                </span>
+              ))}
             </div>
-          </div>
-          <div className="relative mt-8 h-[400px] w-full bg-ab bg-cover bg-center bg-no-repeat px-4 sm:mt-0 lg:ml-2.5 lg:w-1/2">
-            <span className="absolute bottom-2 left-2 text-xs">
-              @selene.rgb
-            </span>
           </div>
         </div>
       </div>

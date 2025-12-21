@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx sanity@latest init:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t 10 /nobreak)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(move \"src\\sanity\\schemaTypes\\aboutSection.ts\" \"src\\sanity\\schemaTypes\\introSection.ts\")",
+      "Bash(ren:*)"
+    ]
+  }
+}

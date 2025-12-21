@@ -2,8 +2,10 @@ import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
+import HeroWrapper from "@/components/Hero/HeroWrapper";
 import Students from "@/components/Students";
+import ReviewWrapper from "@/components/Review/ReviewWrapper";
+import NewsWrapper from "@/components/News/NewsWrapper";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,10 +19,12 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <Hero />
+      <HeroWrapper />
       <AboutSectionOne />
-      <Students />
       <AboutSectionTwo />
+      <Students />
+      <NewsWrapper />
+      <ReviewWrapper />
       <Contact />
     </>
   );

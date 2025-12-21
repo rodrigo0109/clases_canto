@@ -10,6 +10,10 @@ const nextConfig = {
       },
     ],
   },
+  transpilePackages: ['sanity', '@sanity/vision'],
+  experimental: {
+    reactCompiler: false,
+  },
 };
 
 module.exports = nextConfig;
