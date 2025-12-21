@@ -22,7 +22,8 @@ const AboutSectionTwo = async () => {
           <div className="w-full border"></div>
           <div className="flex flex-col items-center pt-8">
             <p className="text-body-color">
-              Configurá la sección "Sobre mí" en el Studio de Sanity.
+              Configurá la sección &ldquo;Sobre mí&rdquo; en el Studio de
+              Sanity.
             </p>
           </div>
         </div>
@@ -41,14 +42,13 @@ const AboutSectionTwo = async () => {
             className="absolute -inset-4 -z-10 bg-cover bg-center md:-inset-2"
             style={{
               backgroundImage: `url(${backgrounds.aboutSectionTwoBackground})`,
-              filter: "blur(3px)",
             }}
           />
           <div
             className="absolute inset-0 -z-10"
-            style={{
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-            }}
+            // style={{
+            //   backgroundColor: "rgba(0, 0, 0, 0.5)",
+            // }}
           />
         </>
       )}

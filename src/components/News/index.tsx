@@ -4,13 +4,11 @@ import { NewsItem, SectionBackgrounds } from "@/sanity/lib/types";
 import NewsCard from "./NewsCard";
 import NewsModal from "./NewsModal";
 import FeaturedNews from "./FeaturedNews";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+// Swiper styles
+import "swiper/swiper-bundle.min.css";
 
 interface NewsSectionProps {
   newsItems: NewsItem[];
@@ -80,6 +78,7 @@ const NewsSection = ({ newsItems, backgrounds }: NewsSectionProps) => {
           {isClient && regularNewsItems.length > 0 && (
             <div className="mt-12 w-full">
               <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={32}
                 slidesPerView={1}
                 navigation={true}

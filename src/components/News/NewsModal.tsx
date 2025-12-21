@@ -4,14 +4,12 @@ import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ImageLightbox from "./ImageLightbox";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+// Swiper styles
+import "swiper/swiper-bundle.min.css";
 
 interface NewsModalProps {
   newsItem: NewsItem;
@@ -159,6 +157,7 @@ const NewsModal = ({ newsItem, onClose }: NewsModalProps) => {
                 Galería de Imágenes
               </h3>
               <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={20}
                 slidesPerView={1}
                 navigation
